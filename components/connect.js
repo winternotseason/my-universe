@@ -2,7 +2,6 @@
 
 import classes from "./connect.module.css";
 import Link from "next/link";
-import styled, { keyframes } from "styled-components";
 import { LoadingProgressBar } from "./progress-bar";
 import { useEffect, useState } from "react";
 
@@ -22,7 +21,7 @@ export default function Connect() {
     <>
       <LoadingProgressBar />
       {isVisible && (
-        <Link href="/main">
+        <Link href="/channel">
           <div className={classes.connect}>
             <span>Connect</span>
           </div>

@@ -1,6 +1,6 @@
-import './globals.css';
-import PrevConneting from "@/components/prev-connecting";
+import "./globals.css";
+import Connect from "@/components/connect";
 
 export default function Home() {
-  return <PrevConneting />;
+  return <Connect />;
 }

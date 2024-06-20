@@ -1,52 +1,31 @@
-"use client";
+'use client';
 
+import classes from "./connect.module.css";
 import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 import { LoadingProgressBar } from "./progress-bar";
 import { useEffect, useState } from "react";
 
-const flicker = keyframes`
-0% {opacity:0;}
-9% {opacity:0;}
-10% {opacity:.5;}
-13% {opacity:0;}
-20% {opacity:.5;}
-25% {opacity:1;}`;
 
-const ConnectButton = styled.div`
-  position: absolute;
-  top: 50%;
-  color: white;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  font-size: 6rem;
-  font-weight: 900;
-  cursor: pointer;
-  z-index: 1;
-  span {
-    animation: ${flicker} 2s infinite;
-  }
-`;
-
-export default function PrevConneting() {
+export default function Connect() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(true); 
+      setIsVisible(true);
     }, 2000);
 
-    return () => clearTimeout(timer); 
-  }, []); 
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
       <LoadingProgressBar />
       {isVisible && (
         <Link href="/main">
-          <ConnectButton>
+          <div className={classes.connect}>
             <span>Connect</span>
-          </ConnectButton>
+          </div>
         </Link>
       )}
       <video autoPlay loop muted>

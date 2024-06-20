@@ -1,0 +1,36 @@
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  9% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  13% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 1;
+  }
+}
+
+.connect {
+  position: absolute;
+  top: 50%;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 6rem;
+  font-weight: 900;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.connect span {
+  animation: flicker 2s infinite;
+}

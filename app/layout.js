@@ -1,5 +1,11 @@
 import MainHeader from "@/components/main-header";
 import "./globals.css";
+import { DM_Sans } from "next/font/google";
+
+const dmsans = DM_Sans({
+  subsets: ["latin"],
+  weight: "1000",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -8,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={dmsans.className}>
       <body>
         <MainHeader />
         {children}

@@ -6,7 +6,7 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #1b091d;
+  background-color: #000000;
   margin: 0;
   overflow: hidden;
 }
@@ -24,3 +24,4 @@ ul {
   margin: 0;
   padding: 0;
 }
+

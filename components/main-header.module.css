@@ -5,19 +5,26 @@
 .header ul {
   display: flex;
   justify-content: space-around;
-  gap: 2rem;
-  font-size: 3rem;
+  font-weight: 900;
 }
 
 .header ul a {
+  display: flex;
+  flex-direction: column;
+  font-size: 6rem;
   text-decoration: none;
   color: #e5e5e1;
   padding: 0.5rem 1rem;
   border-radius: 4px;
 }
 
-.header ul a:hover,
 .header ul a.active {
   background-color: #bcbcb7;
   color: #181817;
+}
+
+.header ul a .ch {
+  float: right;
+  font-size: 2rem;
+  color: black;
 }

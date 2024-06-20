@@ -1,5 +1,7 @@
 import Link from "next/link";
+import ChannelSpan from "./font-channel";
 import classes from "./main-header.module.css";
+import NavLink from "./nav-link";
 
 export default function MainHeader() {
   return (
@@ -7,22 +9,44 @@ export default function MainHeader() {
       <nav>
         <ul>
           <li>
-            <Link href="/channel">A</Link>
+            <NavLink href="/channel">
+              <ChannelSpan>U</ChannelSpan>
+            </NavLink>
           </li>
           <li>
-            <Link href="/channel/b">B</Link>
+            <NavLink href="/channel/n">
+              <ChannelSpan>N</ChannelSpan>
+            </NavLink>
           </li>
           <li>
-            <Link href="/channel/c">C</Link>
+            <NavLink href="/channel/i">
+              <ChannelSpan>I</ChannelSpan>
+            </NavLink>
           </li>
           <li>
-            <Link href="/channel/d">D</Link>
-          </li>{" "}
-          <li>
-            <Link href="/channel/e">E</Link>
+            <NavLink href="/channel/v">
+              <ChannelSpan>V</ChannelSpan>
+            </NavLink>
           </li>
           <li>
-            <Link href="/channel/f">F</Link>
+            <NavLink href="/channel/e">
+              <ChannelSpan>E</ChannelSpan>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="/channel/r">
+              <ChannelSpan>R</ChannelSpan>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="/channel/s">
+              <ChannelSpan>S</ChannelSpan>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="/channel/e-2">
+              <ChannelSpan>E</ChannelSpan>
+            </NavLink>
           </li>
         </ul>
       </nav>

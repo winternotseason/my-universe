@@ -1,0 +1,41 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main {
+  margin: 0 3rem;
+  display: flex;
+  height: 70%;
+  animation: fadeIn 3s;
+}
+
+.image {
+  width: 45%;
+  position: relative;
+}
+
+.explanation {
+  position: absolute;
+  width: 55%;
+  color: white;
+  bottom: 9rem;
+  right: 5rem;
+}
+
+.explanation h1 {
+  font-size: 4rem;
+}
+
+.explanation p {
+  font-size: 1.5rem;
+}
+
+.test {
+  color: red;
+}
+

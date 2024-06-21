@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={dmsans.className}>
       <body>
-        <MainHeader />
+      <img className="texture" src="/noise.png" alt="background" />
         {children}
       </body>
     </html>

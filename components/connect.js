@@ -1,10 +1,9 @@
-'use client';
+"use client";
 
 import classes from "./connect.module.css";
 import Link from "next/link";
 import { LoadingProgressBar } from "./progress-bar";
 import { useEffect, useState } from "react";
-
 
 export default function Connect() {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,6 +18,7 @@ export default function Connect() {
 
   return (
     <>
+      <img className="texture" src="/break.png" alt="background" />
       <LoadingProgressBar />
       {isVisible && (
         <Link href="/channel">

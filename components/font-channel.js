@@ -1,10 +1,10 @@
-import classes from './main-header.module.css'
+import classes from './font-channel.module.css'
 
 export default function ChannelSpan({children}) {
   return (
     <>
-      <span>{children}</span>
-      <span className={classes.ch}>CH</span>
+      <span className={classes.ch}>{children}</span>
+      <span className={classes.sub}>CH</span>
     </>
   );
 }

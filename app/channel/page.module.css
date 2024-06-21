@@ -1,1 +1,15 @@
+.chatbtn {
+  position: absolute;
+  top:30rem;
+  right: 5rem;
+  z-index: 999;
+}
 
+.chatbtn button {
+  cursor: pointer;
+  background: none;
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgb(188, 188, 188);
+  border: none;
+}

@@ -17,10 +17,13 @@ export default async function PageChannel({ params }) {
           <div className={classes.explanation}>
             <h1>{content.title}</h1>
             <p>{content.explanation}</p>
+            <p>
+              {content.comment} {content.date.replaceAll('-',' ')}
+            </p>
           </div>
         </main>
       ) : (
-       <YouTubePlayer className={classes.fadein} videoId='mZx4DSUzFFQ' />
+        <YouTubePlayer className={classes.fadein} videoId="mZx4DSUzFFQ" />
       )}
     </>
   );

@@ -1,0 +1,23 @@
+
+.container {
+  position: relative;
+  height: 70%;
+  width: 100%;
+  color: white;
+  animation: fadeIn 2s;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 40rem;
+  height: 38rem;
+  text-align: center;
+}
+
+.item p {
+  margin: 0;
+}

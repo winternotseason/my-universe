@@ -4,15 +4,20 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  images : {
+  images: {
     remotePatterns: [
       {
-        protocol : 'https',
-        hostname : 'apod.nasa.gov',
-        port: ''
-      }
-    ]
-  }
+        protocol: "https",
+        hostname: "apod.nasa.gov",
+        port: "",
+      },{
+        protocol: "https",
+        hostname: "mars.nasa.gov",
+        port: "",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
+

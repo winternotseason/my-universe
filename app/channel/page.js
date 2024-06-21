@@ -1,7 +1,10 @@
 import YouTubePlayer from "@/components/youtube";
+import { getMarsRoverPhotos } from "@/lib/nasa";
 import Link from "next/link";
 import classes from "./page.module.css";
-export default function PageChannelA() {
+export default async function PageChannelA() {
+    //const data = await getMarsRoverPhotos();
+    //console.log(data)
   return (
     <>
       <video className={classes.video} autoPlay loop muted>

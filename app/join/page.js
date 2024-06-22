@@ -1,3 +1,5 @@
-export default function Join () {
-    return <main>join</main>
+import JoinForm from "@/components/join-form";
+
+export default function Join() {
+  return <JoinForm />;
 }

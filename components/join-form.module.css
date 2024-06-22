@@ -1,0 +1,66 @@
+.join {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.joinform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  position: absolute;
+  top: 0;
+  z-index: 101;
+  width: 46rem;
+  height: 50rem;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+}
+
+.joinform h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.joinform label {
+  font-size: 1.7rem;
+  margin-bottom: 0.7rem;
+}
+.joinform input {
+  color: white;
+  background: #222222;
+  border: none;
+  width: 27rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  outline: none;
+}
+
+.joinform p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.joinform button {
+  border: 1px solid white;
+  background: none;
+  width: 27rem;
+  font-size: 1.8reauto;
+  color: white;
+  padding: 0.7rem 0;
+  margin-top: 1.3rem;
+  border-radius: 10px;
+}
+
+.errorMessage {
+  margin: 0;
+  font-size: 1.2rem;
+  color: red;
+}

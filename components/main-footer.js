@@ -10,7 +10,7 @@ export default function MainFooter() {
         </Link>
       </div>
       <div className={classes.i}>
-        <Link href="">
+        <Link href="/join">
           <p>JOIN</p>
         </Link>
         <Link href="">

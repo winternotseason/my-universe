@@ -9,7 +9,7 @@ export default async function ChannelN() {
   return (
     <main className={classes.main}>
       <div className={classes.image}>
-        <Image fill src={content.imageUrl[0]} alt={content.title} />
+        <Image fill src={content.imageUrl} alt={content.title} />
       </div>
       <div className={classes.explanation}>
         <h1>{content.title}</h1>

@@ -44,7 +44,7 @@ export default function MainHeader() {
             </NavLink>
           </li>
           <li>
-            <NavLink href="/channel/e-2">
+            <NavLink href="/channel/e-1">
               <ChannelSpan>E</ChannelSpan>
             </NavLink>
           </li>

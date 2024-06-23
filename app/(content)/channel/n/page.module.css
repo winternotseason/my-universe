@@ -1,4 +1,3 @@
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -8,23 +7,23 @@
   }
 }
 .main {
-  margin: 0 3rem;
   display: flex;
-  height: 70%;
+  flex-direction: column;
+  height: 90%;
   animation: fadeIn 3s;
+  padding: 0 2rem;
+  overflow: scroll;
 }
 
 .image {
-  width: 45%;
+  width: 100%;
+  height: 30rem;
   position: relative;
 }
 
 .explanation {
-  position: absolute;
-  width: 55%;
+  width: 100%;
   color: white;
-  bottom: 9rem;
-  right: 5rem;
 }
 
 .explanation h1 {
@@ -37,4 +36,23 @@
 
 .test {
   color: red;
+}
+
+/* 넓이가 40rem 보다 같거나 클때 작용 */
+@media (min-width: 40rem) {
+  .main {
+    flex-direction: row;
+    height: 70%;
+    
+  }
+  .image {
+    width: 45%;
+  }
+  .explanation {
+    width:55%;
+    position: absolute;
+    bottom:9rem;
+    right: 5rem;
+    margin-left: 3rem;
+  }
 }

@@ -1,0 +1,14 @@
+.cut {
+    margin-top: 20rem;
+    color: white;
+  text-align: center;
+}
+
+.cut h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.cut p {
+    font-size: 2rem;
+}

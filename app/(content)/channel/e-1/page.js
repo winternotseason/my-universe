@@ -7,11 +7,12 @@ import stamp from "@/public/stamp.png";
 import { getUserById } from "@/lib/user";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { FaRocket } from "react-icons/fa";
+import Cut from "@/components/cut";
 
 export default async function ChannelE1() {
   const result = await verifyAuth();
   if (!result.user) {
-    return <p className={classes.title}>로그인이 필요합니다.</p>;
+    return <Cut header="MY PAGE"/>;
   }
 
   const user = getUserById(result.user.id);

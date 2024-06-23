@@ -1,3 +1,4 @@
+import Cut from "@/components/cut";
 import News from "@/components/news";
 import { verifyAuth } from "@/lib/auth";
 
@@ -10,7 +11,7 @@ export default async function ChannelS() {
   
   // 인증된 사용자가 아니라면
   if (!result.user) {
-    return <p className={classes.title}>로그인이 필요합니다.</p>;
+    return <Cut header="RECENT NEWS ABOUT UNIVERSE"/>
   }
 
   return <News />;

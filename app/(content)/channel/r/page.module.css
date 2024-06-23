@@ -1,3 +1,77 @@
-.title {
-    color : white
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
+.books {
+  overflow-y: scroll;
+  width: 100%;
+  height: 70%;
+  display: grid;
+  color: white;
+  animation: fadeIn 2s;
+}
+
+.books a {
+  all: unset;
+}
+
+.books h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.books h3 {
+  margin-right: 6rem;
+  text-align: end;
+  font-size: 2rem;
+}
+
+.books .image {
+  position: relative;
+  width: 30%;
+  height: 28rem;
+  background-color: red;
+}
+
+.books ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style-type: none;
+  gap: 2rem;
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.books li {
+  display: flex;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 2rem;
+  border: 1px solid rgb(81, 81, 81);
+  height: 32rem;
+  overflow-y: hidden;
+}
+
+.books h2 {
+  font-size: 1.8rem;
+}
+
+.books p {
+  font-size: 1.3rem;
+}
+
+.books .content {
+  overflow: hidden;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  width: 60%;
+  height: 28rem;
+}
+

@@ -17,6 +17,15 @@ const nextConfig = {
         hostname: "mars.nasa.gov",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "shopping-phinf.pstatic.net",
+        port: ""
+      },{
+        protocol: "https",
+        hostname: "i.scdn.co",
+        port: ""
+      }
     ],
   },
 };

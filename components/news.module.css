@@ -1,17 +1,37 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 .news {
+  overflow-y: scroll;
   width: 100%;
   display: grid;
   color: white;
+  height: 70%;
+  animation : fadeIn 2s;
 }
 
 .news a {
   all: unset;
 }
 
+
 .news h1 {
   font-size: 5rem;
   text-align: center;
-  
+  margin-bottom: 2rem;
+}
+
+.news h3 {
+  margin-right: 6rem;
+  text-align: end;
+  font-size: 2rem;
+  color: white;
 }
 
 .news ul {
@@ -19,20 +39,22 @@
   grid-template-columns: repeat(2, 1fr);
   list-style-type: none;
   gap: 2rem;
-  padding: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .news li {
   cursor: pointer;
   box-sizing: border-box;
   padding: 2rem;
-  border: 1px solid white;
+  border: 1px solid rgb(81, 81, 81);
 }
 
 .news h2 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 .news p {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }

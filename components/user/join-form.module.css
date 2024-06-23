@@ -10,12 +10,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 5rem;
   position: absolute;
   top: 0;
   z-index: 101;
   width: 46rem;
-  height: 50rem;
+  height: 53rem;
   background: none;
   border: 1px solid white;
   color: white;
@@ -46,22 +46,30 @@
 .joinform p {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
+
 .joinform button {
   cursor: pointer;
-  border: 1px solid white;
   background: none;
   width: 27rem;
-  font-size: 1.8reauto;
+  font-size: 1.5rem;
   color: white;
   padding: 0.7rem 0;
-  margin-top: 1.3rem;
+  margin-bottom: 2rem;
   border-radius: 10px;
+}
+
+.create {
+  border: 1px solid white;
+}
+
+.join {
+  border: 1px solid gray;
 }
 
 .errorMessage {
   margin: 0;
-  font-size: 1.2rem;
-  color: red;
+  font-size: 1.6rem;
+  color: rgb(170, 0, 0);
 }

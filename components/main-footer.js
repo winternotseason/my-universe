@@ -13,7 +13,7 @@ export default function MainFooter() {
         <Link href="/join">
           <p>JOIN</p>
         </Link>
-        <Link href="">
+        <Link href="/login">
           <p>LOGIN</p>
         </Link>
       </div>

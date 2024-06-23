@@ -26,11 +26,12 @@ export default function JoinForm() {
             name="password-confirm"
           />
         </p>
-        {formState.errors && (
-          <span className={classes.errorMessage}>{formState.errors.msg}</span>
-        )}
         <p>
-          <button>CREATE</button>
+          <button className={classes.create}>CREATE</button>
+          <button className={classes.login}>LOGIN</button>
+        </p>
+        <p className={classes.errorMessage}>
+          {formState.errors && <>{formState.errors.msg}</>}
         </p>
       </form>
     </div>

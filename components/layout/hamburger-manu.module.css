@@ -1,0 +1,28 @@
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: -14rem;
+  z-index: 999;
+  width: 10rem;
+  height: 100vh;
+  background-color: #0f0f0f;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  transition: left 0.3s ease;
+}
+
+.hamburger li a {
+  font-size: 4rem;
+  text-decoration: none;
+  color: #e5e5e1;
+  border-radius: 4px;
+  width: 7rem;
+}
+
+.open {
+  left: 0;
+}

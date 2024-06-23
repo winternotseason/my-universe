@@ -1,5 +1,7 @@
 .header {
-  padding: 4rem;
+  /* padding: 4rem; */
+  padding: 4rem 2rem;
+ display: none;
 }
 
 .header ul {
@@ -11,11 +13,21 @@
 .header ul a {
   display: flex;
   flex-direction: column;
-  font-size: 6rem;
+  /* font-size: 6rem;*/
+  font-size: 4rem;
   text-decoration: none;
   color: #e5e5e1;
   padding: 0.5rem 1rem;
   border-radius: 4px;
 }
 
-
+/* 넓이가 40rem 보다 같거나 클때 작용 */
+@media (min-width: 40rem) {
+  .header {
+    display: block;
+    padding: 4rem;
+  }
+  .header ul a {
+    font-size: 7rem;
+  }
+}

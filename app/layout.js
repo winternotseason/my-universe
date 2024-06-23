@@ -1,4 +1,4 @@
-import MainHeader from "@/components/main-header";
+
 import "./globals.css";
 import { DM_Sans } from "next/font/google";
 

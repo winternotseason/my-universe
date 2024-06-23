@@ -1,75 +1,71 @@
-.join {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .joinform {
+  position: relative;
+  z-index: 101;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
-  position: absolute;
-  top: 0;
-  z-index: 101;
+  margin: 5rem auto;
   width: 46rem;
-  height: 53rem;
-  background: none;
+  height: 47rem;
   border: 1px solid white;
-  color: white;
-  border-radius: 10px;
+  padding-top: 4rem;
 }
 
 .joinform h1 {
+  color: white;
   font-size: 3rem;
-  text-align: center;
-  margin: 4rem 0;
+  margin-top: 0;
+  margin-bottom: 1.7rem;
 }
 
 .joinform label {
+  color: white;
   font-size: 1.7rem;
   margin-bottom: 0.7rem;
 }
 .joinform input {
   color: white;
-  background: #222222;
   border: none;
   width: 27rem;
   padding: 0.5rem;
   font-size: 1.5rem;
   border-radius: 10px;
   outline: none;
+  background: #222222;
 }
 
 .joinform p {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .joinform button {
-  cursor: pointer;
-  background: none;
+  all: unset;
+  text-align: center;
+  border: 1px solid white;
   width: 27rem;
   font-size: 1.5rem;
   color: white;
   padding: 0.7rem 0;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
   border-radius: 10px;
+  cursor: pointer;
 }
 
-.create {
-  border: 1px solid white;
+.joinform a {
+  all: unset;
+  text-align: center;
+  font-size: 1.1rem;
+  color: white;
+  margin-top: 1rem;
+  cursor: pointer;
 }
 
-.join {
-  border: 1px solid gray;
-}
+
 
 .errorMessage {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: rgb(170, 0, 0);
 }

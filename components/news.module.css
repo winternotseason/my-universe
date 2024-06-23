@@ -1,0 +1,38 @@
+.news {
+  width: 100%;
+  display: grid;
+  color: white;
+}
+
+.news a {
+  all: unset;
+}
+
+.news h1 {
+  font-size: 5rem;
+  text-align: center;
+  
+}
+
+.news ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style-type: none;
+  gap: 2rem;
+  padding: 5rem;
+}
+
+.news li {
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 2rem;
+  border: 1px solid white;
+}
+
+.news h2 {
+    font-size: 1.8rem;
+}
+
+.news p {
+    font-size: 1.3rem;
+}

@@ -1,3 +1,55 @@
-.title {
-    color : white
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7rem auto;
+  width: 70rem;
+  height: 40rem;
+  background: #8ca598;
+  border-radius: 50px;
+}
+
+.img {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  margin-left: 2.3rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  height: 40rem;
+  background-color: white;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.info p {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: black;
+}
+
+.info .icon {
+    margin-right: 0.5rem;
+}
+
+.detail {
+  width: 20rem;
+  height: 10rem;
+  background-color: blue;
+  margin-top: 2rem;
+}
+
+.stamp {
+  left: 58rem;
+  top: 48rem;
+  position: absolute;
 }

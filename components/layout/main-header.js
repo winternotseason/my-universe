@@ -1,7 +1,7 @@
 import Link from "next/link";
-import ChannelSpan from "./font-channel";
+import ChannelSpan from "../font-channel";
+import NavLink from "../nav-link";
 import classes from "./main-header.module.css";
-import NavLink from "./nav-link";
 
 export default function MainHeader() {
   return (

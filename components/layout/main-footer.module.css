@@ -1,5 +1,4 @@
 .footer {
-
   display: flex;
   justify-content: space-between;
   height: 5rem;
@@ -8,6 +7,10 @@
   bottom: 0;
   color: white;
   font-size: 3rem;
+}
+
+.footer button {
+  all: unset;
 }
 
 .footer a {
@@ -19,14 +22,14 @@
   display: flex;
 }
 
-.i p {
+.i button {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 2rem;
 }
 
-.disconnect p {
+.disconnect button {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 2rem;

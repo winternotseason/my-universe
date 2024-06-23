@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  reactStrictMode: true,
   compiler: {
     styledComponents: true,
   },
@@ -10,7 +11,8 @@ const nextConfig = {
         protocol: "https",
         hostname: "apod.nasa.gov",
         port: "",
-      },{
+      },
+      {
         protocol: "https",
         hostname: "mars.nasa.gov",
         port: "",
@@ -20,4 +22,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-

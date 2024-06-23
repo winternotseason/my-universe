@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 .profile {
   display: flex;
   justify-content: space-between;
@@ -7,6 +16,7 @@
   height: 40rem;
   background: #8ca598;
   border-radius: 50px;
+  animation : fadeIn 2s;
 }
 
 .img {

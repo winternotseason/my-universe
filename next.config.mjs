@@ -2,32 +2,27 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  compiler: {
-    styledComponents: true,
-  },
   images: {
     remotePatterns: [
       {
-        protocol: "https",
         hostname: "apod.nasa.gov",
-        port: "",
       },
       {
-        protocol: "https",
         hostname: "mars.nasa.gov",
-        port: "",
       },
       {
-        protocol: "https",
         hostname: "shopping-phinf.pstatic.net",
-        port: ""
-      },{
-        protocol: "https",
+      },
+      {
         hostname: "i.scdn.co",
-        port: ""
-      }
+      },
     ],
   },
+  env : {
+    NASA_API_KEY : 'gPIWx53boOzJaWnh3BDgFUU5RFyYu81rxhUwyGUp',
+    NAVER_CLIENT_ID : 'BoJTxbnp8XfeqDvtDwHc',
+    NAVER_CLIENT_SECRET :'wUmPD8WYJB'
+  }
 };
 
 export default nextConfig;

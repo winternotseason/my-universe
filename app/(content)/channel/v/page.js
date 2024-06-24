@@ -1,4 +1,4 @@
-import { getImagesAboutUniverse } from "@/lib/naver-serach";
+import { getImagesAboutUniverse } from "@/lib/api/naver-serach";
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./page.module.css";

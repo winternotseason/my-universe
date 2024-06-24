@@ -1,6 +1,6 @@
 import { nanumgothic } from "@/app/layout";
 import { verifyAuth } from "@/lib/auth";
-import { getBooksAboutUniverse } from "@/lib/naver-serach";
+import { getBooksAboutUniverse } from "@/lib/api/naver-serach";
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./page.module.css";

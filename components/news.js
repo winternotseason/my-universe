@@ -1,5 +1,5 @@
 import { nanumgothic } from "@/app/layout";
-import {getNewsAboutUniverse} from "@/lib/naver-serach";
+import {getNewsAboutUniverse} from "@/lib/api/naver-serach";
 import Link from "next/link";
 import classes from "./news.module.css";
 

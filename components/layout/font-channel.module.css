@@ -1,9 +1,9 @@
 .sub {
-    margin:0;
-    font-size: 2rem;
-    color: black;
-  }
+  margin: 0;
+  font-size: 2rem;
+  color: black;
+}
 
-  .ch {
-    line-height: 1;
-  }
+.ch {
+  line-height: 1;
+}

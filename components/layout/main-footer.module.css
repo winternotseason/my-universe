@@ -20,12 +20,13 @@
   text-decoration: none;
 }
 
-.footer .i {
+.footer .usermanu {
   display: flex;
   align-items: center;
 }
 
-.i button {
+.usermanu button {
+  cursor: pointer;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
@@ -46,11 +47,11 @@
 }
 
 @media all and (min-width: 1024px) {
-  .i form {
+  .usermanu form {
     
     height: 62.5px;
   }
-  .i a {
+  .usermanu a {
     height: 62.5px;
   }
   .footer a {

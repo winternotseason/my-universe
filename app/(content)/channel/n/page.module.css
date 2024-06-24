@@ -35,11 +35,7 @@
   font-size: 1.5rem;
 }
 
-.test {
-  color: red;
-}
 
-/* 넓이가 40rem 보다 같거나 클때 작용 */
 @media all and (min-width: 1024px) {
   .main {
     flex-direction: row;

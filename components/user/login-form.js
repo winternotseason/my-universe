@@ -1,8 +1,9 @@
 "use client";
 
-import classes from "./login-form.module.css";
 import { useFormState } from "react-dom";
 import { login } from "@/actions/auth-action";
+import classes from "./login-form.module.css";
+
 export default function LoginForm() {
   const [formState, formAction] = useFormState(login, {});
   return (

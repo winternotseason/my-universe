@@ -1,5 +1,4 @@
-import "./globals.css";
-import Connect from "@/components/start/connect";
+import Connect from "@/components/connect/connect";
 
 export default function Home() {
   return <Connect />;

@@ -1,9 +1,10 @@
-import Cut from "@/components/cut";
+import { nanumgothic } from "@/app/layout";
 import { verifyAuth } from "@/lib/auth";
 import { getBooksAboutUniverse } from "@/lib/naver-serach";
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./page.module.css";
+import Cut from "@/components/cut";
 
 export default async function ChannelR() {
   const result = await verifyAuth();
@@ -19,7 +20,7 @@ export default async function ChannelR() {
     <div className={classes.books}>
       <h1>BOOKS ABOUT UNIVERSE</h1>
       <h3>Click for details!</h3>
-      <ul>
+      <ul className={nanumgothic.className}>
         {books.items.slice(0, 10).map((book) => (
           <Link target="_blank" href={book.link} key={book.title}>
             <li>

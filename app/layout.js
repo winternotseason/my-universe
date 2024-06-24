@@ -1,5 +1,12 @@
 import "./globals.css";
 import { DM_Sans } from "next/font/google";
+import { Nanum_Gothic } from "next/font/google"
+
+
+export const nanumgothic = Nanum_Gothic({
+  subsets: ["latin"],
+  weight: ["400"]
+})
 
 const dmsans = DM_Sans({
   subsets: ["latin"],

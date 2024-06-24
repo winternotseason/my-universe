@@ -1,7 +1,8 @@
 import { verifyAuth } from "@/lib/auth";
+import { logout } from "@/actions/auth-action";
 import Link from "next/link";
 import classes from "./main-footer.module.css";
-import { logout } from "@/actions/auth-action";
+
 
 export default async function MainFooter() {
   const result = await verifyAuth();
@@ -12,7 +13,7 @@ export default async function MainFooter() {
           <button>DISCONNECT</button>
         </Link>
       </div>
-      <div className={classes.i}>
+      <div className={classes.usermanu}>
         {result.user ? (
           <form action={logout}>
             <button>LOGOUT</button>

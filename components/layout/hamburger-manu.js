@@ -87,6 +87,3 @@ export default function HamburgerManu({ manuOpen, setManuOpen }) {
   );
 }
 
-
-// false일떄 햄버거 메뉴 사라지게 해야함. open 클래스 삭제
-// true일때 나타나게 left: 0줌

@@ -1,9 +1,9 @@
 "use client";
 
 import classes from "./mobile-header.module.css";
+import HamburgerManu from "./hamburger-manu";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import HamburgerManu from "./hamburger-manu";
 
 export default function MobileHeader() {
   const [manuOpen, setManuOpen] = useState(false);

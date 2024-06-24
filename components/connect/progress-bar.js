@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 export const LoadingProgressBar = () => {
   const [isVisible, setIsVisible] = useState(true);
 
+  // 2초뒤에 progress Bar 사라짐
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);

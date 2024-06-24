@@ -2,12 +2,14 @@
 
 import classes from "./connect.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import { LoadingProgressBar } from "./progress-bar";
 import { useEffect, useState } from "react";
 
 export default function Connect() {
   const [isVisible, setIsVisible] = useState(false);
 
+  // Loading 효과 생성
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -18,7 +20,7 @@ export default function Connect() {
 
   return (
     <>
-      <img className="texture" src="/break.png" alt="background" />
+      <Image fill className="texture" src="/break.png" alt="background" />
       <LoadingProgressBar />
       {isVisible && (
         <Link href="/channel">

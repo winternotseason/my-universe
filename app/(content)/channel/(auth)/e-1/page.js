@@ -1,26 +1,29 @@
 import { verifyAuth } from "@/lib/auth";
-import Image from "next/image";
 import { redirect } from "next/navigation";
-import classes from "./page.module.css";
-import astronaut from "@/public/astronaut.png";
-import stamp from "@/public/stamp.png";
 import { getUserById } from "@/lib/user";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { FaRocket } from "react-icons/fa";
+import { nanumgothic } from "@/app/layout";
+import Image from "next/image";
 import Cut from "@/components/cut";
+import classes from "./page.module.css";
+import astronaut from "@/public/astronaut.png";
+import stamp from "@/public/stamp.png";
+
 
 export default async function ChannelE1() {
   const result = await verifyAuth();
+
+  // 인증된 사용자가 아니라면
   if (!result.user) {
     return <Cut header="MY PAGE"/>;
   }
 
+  // 유저 정보 불러오기
   const user = getUserById(result.user.id);
 
-  // 인증된 사용자가 아니라면
-
   return (
-    <div className={classes.profile}>
+    <div className={`${classes.profile} ${nanumgothic.className}`}>
       <div className={classes.img}>
         <Image src={astronaut} fill alt="profile image" />
       </div>

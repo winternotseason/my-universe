@@ -1,9 +1,9 @@
 "use client";
 
 import classes from "./join-form.module.css";
+import Link from "next/link";
 import { useFormState } from "react-dom";
 import { signup } from "@/actions/auth-action.js";
-import Link from "next/link";
 
 export default function JoinForm() {
   const [formState, formAction] = useFormState(signup, {});

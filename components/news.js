@@ -1,3 +1,4 @@
+import { nanumgothic } from "@/app/layout";
 import {getNewsAboutUniverse} from "@/lib/naver-serach";
 import Link from "next/link";
 import classes from "./news.module.css";
@@ -14,8 +15,8 @@ export default async function News() {
           <Link target="_blank" href={item.link} key={item.title}>
             <li>
               <h2 dangerouslySetInnerHTML={{__html : item.title}} />
-              <p dangerouslySetInnerHTML={{__html : item.description}} />
-              <p>{new Date(item.pubDate).toISOString().split("T")[0]}</p>
+              <p className={nanumgothic.className} dangerouslySetInnerHTML={{__html : item.description}} />
+              <p className={nanumgothic.className}>{new Date(item.pubDate).toISOString().split("T")[0]}</p>
             </li>
           </Link>
         ))}
@@ -24,5 +25,3 @@ export default async function News() {
   );
 }
 
-
-//  {item.description.replace(/<b>/g, "").replace(/<\/b>/g, "").replace(/&quot;/g, '')}

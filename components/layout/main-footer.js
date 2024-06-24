@@ -8,9 +8,7 @@ import { useRouter } from "next/navigation";
 export default function MainFooter() {
   const { data: session, status } = useSession();
 const router = useRouter();
-const logoutHandler = () => {
-  fetch('api/auth/logout')
-};
+
   return (
     <footer className={classes.footer}>
       <div className={classes.disconnect}>
@@ -21,7 +19,7 @@ const logoutHandler = () => {
       <div className={classes.usermanu}>
         {status === "authenticated" ? (
           <form>
-            <button onClick={logoutHandler}>LOGOUT</button>
+            <button>LOGOUT</button>
           </form>
         ) : (
           <Link href="/login">

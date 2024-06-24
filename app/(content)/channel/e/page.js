@@ -4,7 +4,7 @@ import classes from "./page.module.css";
 export default function ChannelE() {
   return (
     <div className={classes.container}>
-      <YouTubePlayer videoId="F4HH_fL7QVk" />
+      <YouTubePlayer videoId="mZx4DSUzFFQ" />
     </div>
   );
 }

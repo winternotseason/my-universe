@@ -37,7 +37,7 @@
 .books .image {
   position: relative;
   width: 100%;
-  height: 45rem;
+  height: 60rem;
   background-color: red;
 }
 
@@ -54,7 +54,7 @@
   flex-direction: column;
   cursor: pointer;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 1rem;
   border: 1px solid rgb(81, 81, 81);
   height: 60rem;
   overflow-y: hidden;
@@ -70,15 +70,13 @@
 
 .books .content {
   overflow-x: hidden;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
   height: 28rem;
 }
 
 /* 넓이가 40rem 보다 같거나 클때 작용 */
-@media (min-width: 40rem) {
+@media all and (min-width: 1024px) {
   .books {
     height: 70%;
   }
@@ -102,10 +100,10 @@
   }
   .books li {
     flex-direction: row;
-    height:32rem;
+    height:30rem;
   }
   .books .image {
-    width: 30%;
+    width: 40%;
     height: 28rem;
   }
 }

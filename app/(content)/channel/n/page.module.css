@@ -9,21 +9,22 @@
 .main {
   display: flex;
   flex-direction: column;
-  height: 90%;
+  height: 100%;
   animation: fadeIn 3s;
   padding: 0 2rem;
-  overflow: scroll;
 }
 
 .image {
   width: 100%;
-  height: 30rem;
+  height: 50rem;
   position: relative;
 }
 
 .explanation {
   width: 100%;
   color: white;
+  overflow-y: scroll;
+  height: 30rem;
 }
 
 .explanation h1 {
@@ -39,19 +40,18 @@
 }
 
 /* 넓이가 40rem 보다 같거나 클때 작용 */
-@media (min-width: 40rem) {
+@media all and (min-width: 1024px) {
   .main {
     flex-direction: row;
     height: 70%;
-    
   }
   .image {
     width: 45%;
   }
   .explanation {
-    width:55%;
+    width: 55%;
     position: absolute;
-    bottom:9rem;
+    bottom: 9rem;
     right: 5rem;
     margin-left: 3rem;
   }

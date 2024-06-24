@@ -22,7 +22,7 @@
 }
 
 /* 넓이가 40rem 보다 같거나 클때 작용 */
-@media (min-width: 40rem) {
+@media all and (min-width: 1024px)  {
   .header {
     display: block;
     padding: 4rem;

@@ -14,7 +14,6 @@
   color: white;
   height: 93%;
   animation: fadeIn 2s;
-
 }
 
 .news a {
@@ -59,7 +58,7 @@
   font-size: 1.3rem;
 }
 
-/* 넓이가 40rem 보다 같거나 클때 작용 */
+/* 넓이가 40rem 보다 같거나 클때 작용
 @media (min-width: 40rem) {
   .news {
     height: 70%;
@@ -77,5 +76,33 @@
     grid-template-columns: repeat(2, 1fr);
     padding-left: 5rem;
     padding-right: 5rem;padding-bottom: 5rem;
+  }
+  .news li {
+    height:20rem;
+  }
+} */
+
+/* PC (해상도 1024px)*/
+@media all and (min-width: 1024px) {
+  .news {
+    height: 70%;
+  }
+  .news h1 {
+    font-size: 5rem;
+  }
+  .news h3 {
+    margin-right: 6rem;
+    text-align: end;
+    font-size: 2rem;
+    color: white;
+  }
+  .news ul {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+  }
+  .news li {
+    height: 20rem;
   }
 }

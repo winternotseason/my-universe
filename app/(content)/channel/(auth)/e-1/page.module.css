@@ -13,9 +13,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 9rem auto;
   width: 33rem;
   height: 50rem;
   background: #8ca598;
@@ -67,7 +65,7 @@
   left: 20rem;
 }
 
-@media (min-width: 40rem) {
+@media all and (min-width: 1024px) {
   .profile {
     flex-direction: row;
     margin: 7rem auto;

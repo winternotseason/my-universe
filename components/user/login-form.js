@@ -1,49 +1,29 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { signIn } from "next-auth/react";
 import classes from "./login-form.module.css";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { useFormState } from "react-dom";
+import { login } from "@/actions/auth-action";
 
 export default function LoginForm() {
-  const emailInputRef = useRef();
-  const passwordInputRef = useRef();
-
-  const [isLogin, setIsLogin] = useState(true);
-  const router = useRouter();
-  const submitHandler = async () => {
-    const enteredEmail = emailInputRef.current.value;
-    const enteredPassword = passwordInputRef.current.value;
-
-    const result = await signIn("credentials", {
-      redirect: false,
-      email: enteredEmail,
-      password: enteredPassword,
-    });
-    if (!result.error) {
-      router.replace('/channel');
-    }
-  };
+  const [formState, formAction] = useFormState(login, {});
   return (
-    <form className={classes.loginform} action={submitHandler}>
+    <form className={classes.loginform} action={formAction}>
       <h1>LOGIN</h1>
       <p>
         <label htmlFor="email">Email</label>
-        <input type="text" name="email" id="email" ref={emailInputRef} />
+        <input type="text" name="email" id="email" />
       </p>
       <p>
         <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          ref={passwordInputRef}
-        />
+        <input type="password" id="password" name="password" />
       </p>
       <p>
         <button>LOGIN</button>
       </p>
-      <p className={classes.errorMessage}></p>
+      <p className={classes.errorMessage}>
+        {formState.errors && formState.errors.msg}
+      </p>
     </form>
   );
 }

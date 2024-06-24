@@ -1,14 +1,11 @@
-"use client";
-
+import { logout } from "@/actions/auth-action";
+import { verifyAuth } from "@/lib/auth";
 import Link from "next/link";
 import classes from "./main-footer.module.css";
-import { useSession, signOut } from "next-auth/react";
-import { useRouter } from "next/navigation";
 
-export default function MainFooter() {
-  const { data: session, status } = useSession();
-const router = useRouter();
-
+export default async function MainFooter() {
+  const result = await verifyAuth();
+  
   return (
     <footer className={classes.footer}>
       <div className={classes.disconnect}>
@@ -17,8 +14,8 @@ const router = useRouter();
         </Link>
       </div>
       <div className={classes.usermanu}>
-        {status === "authenticated" ? (
-          <form>
+        {result.user  ? (
+          <form action={logout}>
             <button>LOGOUT</button>
           </form>
         ) : (

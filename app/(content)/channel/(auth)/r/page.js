@@ -4,12 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import classes from "./page.module.css";
 import Cut from "@/components/cut";
+import { verifyAuth } from "@/lib/auth";
 
 export default async function ChannelR() {
   const books = await getBooksAboutUniverse();
-
   // 인증된 사용자가 아니라면
-
+  const result = await verifyAuth();
+  if(!result.user){
+    return <Cut header="BOOKS ABOUT UNIVERSE"/>
+  }
   return (
     <div className={classes.books}>
       <h1>BOOKS ABOUT UNIVERSE</h1>

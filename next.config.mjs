@@ -25,7 +25,7 @@ const nextConfig = {
     DB_HOST : '127.0.0.1',
     DB_USERNAME : 'root',
     DB_PASSWORD : 'dbwls0901',
-    DB_PORT : 3306
+    
   }
 };
 

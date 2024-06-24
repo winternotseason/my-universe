@@ -8,8 +8,15 @@ import Cut from "@/components/cut";
 import classes from "./page.module.css";
 import astronaut from "@/public/astronaut.png";
 import stamp from "@/public/stamp.png";
+import { verifyAuth } from "@/lib/auth";
 
-export default function ChannelE1() {
+export default async function ChannelE1() {
+  const result = await verifyAuth();
+  if (!result.user) {
+    return <Cut header="MY PAGE"/>;
+  }
+  const user = await getUserById(result.user.id);
+
   return (
     <div className={`${classes.profile} ${nanumgothic.className}`}>
       <div className={classes.img}>
@@ -18,12 +25,12 @@ export default function ChannelE1() {
       <div className={classes.info}>
         <p>
           <FaPhoneSquareAlt className={classes.icon} />
-          xitseo@naver.com
+          {user.email}
         </p>
         <p>
-          <FaRocket className={classes.icon} /> 2
+          <FaRocket className={classes.icon} />{" "}
+          {user.date.toISOString().split("T")[0]}
         </p>
-        <p></p>
       </div>
       <Image
         className={classes.stamp}

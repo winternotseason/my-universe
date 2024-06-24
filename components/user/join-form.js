@@ -3,10 +3,11 @@
 import classes from "./join-form.module.css";
 import Link from "next/link";
 import { useFormState } from "react-dom";
-import { signup } from "@/actions/auth-action.js";
+import { signup } from "@/actions/auth-action";
 
 export default function JoinForm() {
   const [formState, formAction] = useFormState(signup, {});
+  console.log(formState)
   return (
     <form className={classes.joinform} action={formAction}>
       <h1>MAKE YOUR UNIVERSE</h1>
@@ -29,7 +30,7 @@ export default function JoinForm() {
         </Link>
       </p>
       <p className={classes.errorMessage}>
-       {formState.errors && <>{formState.errors.msg}</>}
+       {formState.errors && formState.errors.msg}
       </p>
     </form>
   );

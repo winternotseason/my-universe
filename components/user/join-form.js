@@ -29,7 +29,7 @@ export default function JoinForm() {
         </Link>
       </p>
       <p className={classes.errorMessage}>
-        {formState.errors && <>{formState.errors.msg}</>}
+       {formState.errors && <>{formState.errors.msg}</>}
       </p>
     </form>
   );

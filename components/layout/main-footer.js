@@ -1,11 +1,16 @@
-import { verifyAuth } from "@/lib/auth";
-import { logout } from "@/actions/auth-action";
+"use client";
+
 import Link from "next/link";
 import classes from "./main-footer.module.css";
+import { useSession, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
-
-export default async function MainFooter() {
-  const result = await verifyAuth();
+export default function MainFooter() {
+  const { data: session, status } = useSession();
+const router = useRouter();
+const logoutHandler = () => {
+  fetch('api/auth/logout')
+};
   return (
     <footer className={classes.footer}>
       <div className={classes.disconnect}>
@@ -14,9 +19,9 @@ export default async function MainFooter() {
         </Link>
       </div>
       <div className={classes.usermanu}>
-        {result.user ? (
-          <form action={logout}>
-            <button>LOGOUT</button>
+        {status === "authenticated" ? (
+          <form>
+            <button onClick={logoutHandler}>LOGOUT</button>
           </form>
         ) : (
           <Link href="/login">

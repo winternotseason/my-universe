@@ -1,4 +1,3 @@
-import { verifyAuth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import { getUserById } from "@/lib/user";
 import { FaPhoneSquareAlt } from "react-icons/fa";
@@ -10,18 +9,7 @@ import classes from "./page.module.css";
 import astronaut from "@/public/astronaut.png";
 import stamp from "@/public/stamp.png";
 
-
-export default async function ChannelE1() {
-  const result = await verifyAuth();
-
-  // 인증된 사용자가 아니라면
-  if (!result.user) {
-    return <Cut header="MY PAGE"/>;
-  }
-
-  // 유저 정보 불러오기
-  const user = getUserById(result.user.id);
-
+export default function ChannelE1() {
   return (
     <div className={`${classes.profile} ${nanumgothic.className}`}>
       <div className={classes.img}>
@@ -29,11 +17,11 @@ export default async function ChannelE1() {
       </div>
       <div className={classes.info}>
         <p>
-          <FaPhoneSquareAlt className={classes.icon}/>
-          {user.email}
+          <FaPhoneSquareAlt className={classes.icon} />
+          xitseo@naver.com
         </p>
         <p>
-          <FaRocket className={classes.icon}/> {user.date}
+          <FaRocket className={classes.icon} /> 2
         </p>
         <p></p>
       </div>

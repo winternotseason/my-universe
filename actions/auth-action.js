@@ -70,7 +70,7 @@ export async function login(prevState, formData) {
   }
 
   const isValidPassword = await verifyPassword(existingUser.password, password);
-  console.log("검증결과", isValidPassword);
+ 
   if (!isValidPassword) {
     errors.msg = "비밀번호가 다릅니다.";
     return {

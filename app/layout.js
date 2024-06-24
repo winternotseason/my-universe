@@ -1,12 +1,12 @@
 import "./globals.css";
 import { DM_Sans } from "next/font/google";
-import { Nanum_Gothic } from "next/font/google"
-
+import { Nanum_Gothic } from "next/font/google";
+import Image from "next/image";
 
 export const nanumgothic = Nanum_Gothic({
   subsets: ["latin"],
-  weight: ["400"]
-})
+  weight: ["400"],
+});
 
 const dmsans = DM_Sans({
   subsets: ["latin"],
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={dmsans.className}>
       <body>
-        <img className="texture" src="/noise.png" alt="background" />
+        <Image fill className="texture" src="/noise.png" alt="background" />
         {children}
       </body>
     </html>

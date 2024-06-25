@@ -24,7 +24,7 @@ const nextConfig = {
     NAVER_CLIENT_SECRET: "wUmPD8WYJB",
     DB_USERNAME: "root",
     DB_PASSWORD: "dbwls0901",
-    DB_HOST : 'localhost'
+    DB_HOST : '127.0.0.1'
   },
 };
 

@@ -1,8 +1,10 @@
 .header {
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 3rem;
-  padding: 2rem;
+  height: 5rem;
   background-color: black;
+
 }
 
 .header .hambugerbtn {
@@ -11,6 +13,7 @@
   cursor: pointer;
   color: white;
   font-size: 3rem;
+  margin-left:1rem;
 }
 
 @media all and (min-width: 1024px) {

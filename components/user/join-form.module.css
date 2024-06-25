@@ -3,31 +3,31 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  width: 15rem;
+  width: 18rem;
   border: 1px solid white;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
   border-radius: 20px;
+  padding: 1.5rem 0;
+  margin-top: 4rem;
 }
 
 .joinform h1 {
   color: white;
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-top: 0;
   margin-bottom: 1.3rem;
 }
 
 .joinform label {
   color: white;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin: 0.3rem 0;
 }
 .joinform input {
   color: white;
   border: none;
-  width: 10rem;
+  width: 12rem;
   padding: 0.2rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   border-radius: 10px;
   outline: none;
   background: #222222;
@@ -43,8 +43,8 @@
   all: unset;
   text-align: center;
   border: 1px solid white;
-  width: 10rem;
-  font-size: 0.8rem;
+  width: 12rem;
+  font-size: 1rem;
   color: white;
   padding: 0.3rem 0;
   margin-top: 1rem;
@@ -55,7 +55,7 @@
 .joinform a {
   all: unset;
   text-align: center;
-  font-size: 0.4rem;
+  font-size: 0.7rem;
   color: white;
   margin-top: 0.5rem;
   cursor: pointer;

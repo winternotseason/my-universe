@@ -9,10 +9,11 @@
 
 .news {
   overflow-y: scroll;
-  width: 100%;
+
   display: grid;
   color: white;
-  height: 93%;
+  width: 100%;
+  height: 100%;
   animation: fadeIn 2s;
 }
 
@@ -34,7 +35,7 @@
 }
 
 .news h2 {
-  margin:0;
+  margin: 0;
 }
 
 .news ul {
@@ -60,15 +61,10 @@
 
 .news p {
   font-size: 1.3rem;
-
 }
-
 
 /* PC (해상도 1024px)*/
 @media all and (min-width: 1024px) {
-  .news {
-    height: 70%;
-  }
   .news h1 {
     font-size: 5rem;
   }

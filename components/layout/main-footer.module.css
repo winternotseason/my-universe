@@ -48,7 +48,6 @@
 
 @media all and (min-width: 1024px) {
   .usermanu form {
-    
     height: 62.5px;
   }
   .usermanu a {
@@ -65,6 +64,7 @@
     font-size: 3rem;
   }
   .footer {
-    background: none;
+    box-sizing: border-box;
+    height: 7rem;
   }
 }

@@ -1,9 +1,15 @@
 .sub {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1rem;
   color: black;
 }
 
 .ch {
   line-height: 1;
+}
+
+@media all and (min-width: 1024px) {
+  .sub {
+    font-size: 2rem;
+  }
 }

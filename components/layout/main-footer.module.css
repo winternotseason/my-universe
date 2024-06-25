@@ -12,7 +12,7 @@
 
 .footer button {
   all: unset;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .footer a {
@@ -30,7 +30,7 @@
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .disconnect {
@@ -52,6 +52,9 @@
   }
   .usermanu a {
     height: 62.5px;
+  }
+  .usermanu button {
+    margin-right: 2rem;
   }
   .footer a {
     color: #e5e5e1;

@@ -8,19 +8,18 @@
   left: -14rem;
   z-index: 100;
   width: 10rem;
-  height: 100vh;
+  height: 100%;
   background-color: #0f0f0f;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem;
   transition: left 0.3s ease;
 }
 
 .hamburger li a {
-  font-size: 4rem;
+  font-size: 3rem;
   text-decoration: none;
   color: #e5e5e1;
   border-radius: 4px;
-  width: 7rem;
+  width: 5.5rem;
 }
 
 .open {

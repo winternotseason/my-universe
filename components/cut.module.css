@@ -2,16 +2,16 @@
   margin: auto;
   color: white;
   text-align: center;
-  margin-top :28rem;
 }
 
 .cut h1 {
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 .cut p {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  margin-bottom: 4rem;
 }
 
 @media all and (min-width: 1024px) {
@@ -23,5 +23,6 @@
   }
   .cut p {
     font-size: 2rem;
+    margin-bottom:0;
   }
 }

@@ -19,7 +19,7 @@ export default function Connect() {
   }, []);
 
   return (
-    <>
+    <div className={classes.background}>
       <LoadingProgressBar />
       {isVisible && (
         <Link href="/channel">
@@ -28,12 +28,6 @@ export default function Connect() {
           </div>
         </Link>
       )}
-      <video autoPlay loop muted>
-        <source
-          src="https://cdn.pixabay.com/video/2022/09/18/131735-751029898_large.mp4"
-          type="video/mp4"
-        />
-      </video>
-    </>
+    </div>
   );
 }

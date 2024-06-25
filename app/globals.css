@@ -10,9 +10,7 @@ body {
   height: 100%;
   margin: 0;
   overflow: hidden;
-  background-color: black;
   background-image: url("/universe.jpg");
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

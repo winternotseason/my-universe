@@ -19,18 +19,32 @@
   }
 }
 
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url("/connect-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .connect {
   position: absolute;
   top: 50%;
   color: white;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  font-size: 6rem;
-  font-weight: 900;
+  font-size: 3rem;
   cursor: pointer;
   z-index: 999;
 }
 
 .connect span {
   animation: flicker 2s infinite;
+}
+
+@media all and (min-width: 1024px) {
+  .connect {
+    font-size: 6rem;
+  }
 }

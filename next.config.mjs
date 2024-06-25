@@ -18,16 +18,14 @@ const nextConfig = {
       },
     ],
   },
-  env : {
-    NASA_API_KEY : 'gPIWx53boOzJaWnh3BDgFUU5RFyYu81rxhUwyGUp',
-    NAVER_CLIENT_ID : 'BoJTxbnp8XfeqDvtDwHc',
-    NAVER_CLIENT_SECRET :'wUmPD8WYJB',
-    DB_HOST : '127.0.0.1',
-    DB_USERNAME : 'root',
-    DB_PASSWORD : 'dbwls0901',
-    
-  }
+  env: {
+    NASA_API_KEY: "gPIWx53boOzJaWnh3BDgFUU5RFyYu81rxhUwyGUp",
+    NAVER_CLIENT_ID: "BoJTxbnp8XfeqDvtDwHc",
+    NAVER_CLIENT_SECRET: "wUmPD8WYJB",
+    DB_HOST: mysql,
+    DB_USERNAME: "root",
+    DB_PASSWORD: "dbwls0901",
+  },
 };
 
 export default nextConfig;
-

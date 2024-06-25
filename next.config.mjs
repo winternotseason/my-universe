@@ -22,9 +22,7 @@ const nextConfig = {
     NASA_API_KEY: "gPIWx53boOzJaWnh3BDgFUU5RFyYu81rxhUwyGUp",
     NAVER_CLIENT_ID: "BoJTxbnp8XfeqDvtDwHc",
     NAVER_CLIENT_SECRET: "wUmPD8WYJB",
-    DB_USERNAME: "root",
-    DB_PASSWORD: "dbwls0901",
-    DB_HOST : '127.0.0.1'
+
   },
 };
 

@@ -41,6 +41,7 @@ export async function signup(prevState, formData) {
   try {
     const res = await fetch(`${process.env.NEXTAUTH_URL}api/account/join`, {
       method: "POST",
+      credentials:'include',
       body: JSON.stringify({ email, hashedPassword, date }),
       headers: {
         "content-type": "application/json",

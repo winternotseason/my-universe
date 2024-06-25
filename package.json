@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lucia-auth/adapter-mongodb": "^1.0.3",
     "@lucia-auth/adapter-mysql": "^3.0.2",
     "@lucia-auth/adapter-sqlite": "^3.0.1",
     "bcrypt": "^5.1.1",
     "better-sqlite3": "^9.6.0",
     "lucia": "^3.2.0",
+    "mongodb": "^6.7.0",
     "mysql2": "^3.10.1",
     "next": "14.2.4",
     "react": "^18",

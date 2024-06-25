@@ -1,5 +1,4 @@
 import { redirect } from "next/navigation";
-import { getUserById } from "@/lib/user";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { FaRocket } from "react-icons/fa";
 import { nanumgothic } from "@/app/layout";
@@ -13,9 +12,8 @@ import { verifyAuth } from "@/lib/auth";
 export default async function ChannelE1() {
   const result = await verifyAuth();
   if (!result.user) {
-    return <Cut header="MY PAGE"/>;
+    return <Cut header="MY PAGE" />;
   }
-  const user = await getUserById(result.user.id);
 
   return (
     <div className={`${classes.profile} ${nanumgothic.className}`}>

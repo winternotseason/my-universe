@@ -7,7 +7,7 @@ import { signup } from "@/actions/auth-action";
 
 export default function JoinForm() {
   const [formState, formAction] = useFormState(signup, {});
-  console.log(formState)
+  
   return (
     <form className={classes.joinform} action={formAction}>
       <h1>MAKE YOUR UNIVERSE</h1>

@@ -14,10 +14,10 @@ export async function POST(req, res) {
 
   // 이미 같은 이메일의 유저가 존재하면?
   if (user > 0) {
-    return NextResponse.json(
-      { message: "이미 존재하는 아이디입니다." },
-      { status: 500 }
-    );
+    return NextResponse.json({
+      status: 500,
+      message: "이미 존재하는 아이디입니다.",
+    });
   }
   data.password = await hashUserPassword(data.password);
   await db.collection("users").insertOne({
@@ -26,5 +26,5 @@ export async function POST(req, res) {
     date: data.date,
   });
 
-  return NextResponse.json({ message: "회원가입 성공!!!!" });
+  return NextResponse.json({ status: 200 });
 }

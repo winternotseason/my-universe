@@ -47,7 +47,8 @@ export async function signup(prevState, formData) {
       },
     });
     const data = await res.json();
-    if (data.status === 500) {
+    console.log(data.status)
+    if (data.status && data.status === 500) {
       errors.msg = data.message;
       return { errors };
     }
@@ -76,15 +77,16 @@ export async function login(prevState, formData) {
         "content-type": "application/json",
       },
     });
-    const data = await res.json();
 
-    success = true;
-    await createAuthSession(data.id);
-  } catch (err) {
-    if (res.status === 500) {
+    const data = await res.json();
+    if (data.status === 500) {
       errors.msg = data.message;
       return { errors };
     }
+    success = true;
+    await createAuthSession(data.id);
+  } catch (err) {
+    console.error(err);
   } finally {
     redirect("/channel");
   }

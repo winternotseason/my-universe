@@ -14,27 +14,26 @@ export async function POST(req) {
   // (1) 일단 이메일이 존재하는지?
 
   const db = client.db("universe");
-  const user = await db.collection("users").countDocuments({ _id: data.email });
+  const user = await db.collection("users").countDocuments({ _id: data.id });
 
   if (user === 0) {
     // 존재하지 않는 이메일
     return NextResponse.json(
-      { message: "존재하지 않는 이메일입니다." },
-      { status: 500 }
+      { status: 500, message: "존재하지 않는 이메일입니다." },
     );
   }
   // 유저가 존재한다면?
-  const userData = await db.collection("users").findOne({ _id: data.email });
+  const userData = await db.collection("users").findOne({ _id: data.id });
 
   const isValidPassword = await verifyPassword(
     userData.password,
     data.password
   );
   if (!isValidPassword) {
-    return NextResponse.json({ message: "비밀번호가 다릅니다." },{ status: 500 });
+    return NextResponse.json({ status: 500,message: "비밀번호가 다릅니다." });
   }
 
-  return NextResponse.json({ id: userData._id }, { status: 200 });
+  return NextResponse.json({ id: userData._id, status:200 });
 }
 
 export async function GET() {

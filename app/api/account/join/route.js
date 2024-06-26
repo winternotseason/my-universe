@@ -1,17 +1,19 @@
 // api/account/join
 
 import { mongo } from "@/lib/auth";
+import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
 
 export async function POST(req, res) {
   const data = await req.json();
 
-  const client = await mongo;
+  const client = await MongoClient.connect(
+    "mongodb+srv://alswjd0101:alswjd0101@universe.bpzvwux.mongodb.net/?retryWrites=true&w=majority&appName=universe"
+  );
+
   const db = client.db("universe");
 
-  const user = await db
-    .collection("users")
-    .countDocuments({ _id: data.email });
+  const user = await db.collection("users").countDocuments({ _id: data.email });
 
   // 이미 같은 이메일의 유저가 존재하면?
   if (user > 0) {

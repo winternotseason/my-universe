@@ -12,8 +12,8 @@ export default function LoginForm() {
     <form className={classes.loginform} action={formAction}>
       <h1>LOGIN</h1>
       <p>
-        <label htmlFor="email">Email</label>
-        <input type="text" name="email" id="email" />
+        <label htmlFor="id">Id</label>
+        <input type="text" name="id" id="id" />
       </p>
       <p>
         <label htmlFor="password">Password</label>

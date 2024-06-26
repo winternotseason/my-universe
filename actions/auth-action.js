@@ -33,9 +33,9 @@ export async function signup(prevState, formData) {
   
   // 가입 날짜 설정
   const date = new Date();
-  const query_date = `${date.getFullYear()}${
+  const query_date = `${date.getFullYear()}-${
     date.getMonth() + 1
-  }${date.getDate()}`;
+  }-${date.getDate()}`;
 
   let success = false;
 
@@ -65,14 +65,14 @@ export async function signup(prevState, formData) {
 
 /* ------------로그인 로직------------ */
 export async function login(prevState, formData) {
-  const email = formData.get("email");
+  const id = formData.get("id");
   const password = formData.get("password");
   let errors = {};
   let success = false;
   try {
     const res = await fetch("http://localhost:3000/api/account/login", {
       method: "POST",
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ id, password }),
       headers: {
         "content-type": "application/json",
       },

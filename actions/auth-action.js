@@ -30,7 +30,6 @@ export async function signup(prevState, formData) {
   }
   /* db 저장 코드 */
 
-  
   // 가입 날짜 설정
   const date = new Date();
   const query_date = `${date.getFullYear()}-${
@@ -79,14 +78,13 @@ export async function login(prevState, formData) {
     });
     const data = await res.json();
 
+    success = true;
+    await createAuthSession(data.id);
+  } catch (err) {
     if (res.status === 500) {
       errors.msg = data.message;
       return { errors };
     }
-    success = true;
-    await createAuthSession(data.id);
-  } catch (err) {
-    console.error(err);
   } finally {
     redirect("/channel");
   }

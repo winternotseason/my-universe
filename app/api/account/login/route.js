@@ -31,16 +31,12 @@ export async function POST(req) {
     data.password
   );
   if (!isValidPassword) {
-    return NextResponse.json(
-      { message: "비밀번호가 다릅니다." },
-      { status: 500 }
-    );
+    return NextResponse.json({ message: "비밀번호가 다릅니다." },{ status: 500 });
   }
 
-
-  return NextResponse.json({ id: userData._id}, { status: 200 });
+  return NextResponse.json({ id: userData._id }, { status: 200 });
 }
 
 export async function GET() {
-  return NextResponse.json({message:'get!'})
+  return NextResponse.json({ message: "get!" });
 }

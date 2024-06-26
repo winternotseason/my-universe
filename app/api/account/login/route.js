@@ -1,6 +1,6 @@
 // api/account/login
 
-import { createAuthSession, mongo } from "@/lib/auth";
+import { connectDB, createAuthSession, mongo } from "@/lib/auth";
 import { verifyPassword } from "@/lib/hash";
 import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
@@ -9,9 +9,7 @@ export async function POST(req) {
   // email 받아와서 => user 정보 반환
   const data = await req.json();
   // 예시 data = { email : test@test.com, password : @(4812kjsdkfnf)12}
-  const client = await MongoClient.connect(
-    "mongodb+srv://alswjd0101:alswjd0101@universe.bpzvwux.mongodb.net/?retryWrites=true&w=majority&appName=universe"
-  );
+  const client = await connectDB;
 
   // (1) 일단 이메일이 존재하는지?
 

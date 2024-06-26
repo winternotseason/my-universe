@@ -24,7 +24,7 @@ const nextConfig = {
     NASA_API_KEY: "gPIWx53boOzJaWnh3BDgFUU5RFyYu81rxhUwyGUp",
     NAVER_CLIENT_ID: "BoJTxbnp8XfeqDvtDwHc",
     NAVER_CLIENT_SECRET: "wUmPD8WYJB",
-    NEXTAUTH_URL : isProd ? 'https://my-universe-liard.vercel.app/' :
+    NEXTAUTH_URL : isProd ? 'https://my-universe-flax.vercel.app/' :
     'http://localhost:3000/'
   },
 };

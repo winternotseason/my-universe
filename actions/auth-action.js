@@ -41,7 +41,7 @@ export async function signup(prevState, formData) {
   console.log(id, password, query_date)
   console.log( JSON.stringify({ id, password, query_date }))
   try {
-    const res = await fetch(`https://my-universe-liard.vercel.app/api/account/join`, {
+    const res = await fetch(`${process.env.NEXTAUTH_URL}api/account/join`, {
       method: "POST",
       body: JSON.stringify({ id, password, query_date }),
       headers: {

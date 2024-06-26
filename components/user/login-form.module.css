@@ -1,40 +1,36 @@
 .loginform {
-  position: relative;
-  z-index: 99;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
-
-  width: 30rem;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 1.5rem 0;
+  width: 18rem;
   border: 1px solid white;
-
-  padding: 2rem 0;
   border-radius: 20px;
 }
 
 .loginform h1 {
   color: white;
-  /*font-size: 3.5rem;*/
-  font-size: 2.8rem;
+  font-size: 1.3rem;
   margin-top: 0;
-  /*margin-bottom: 1.7rem;*/
-  margin-bottom: 1rem;
 }
 
 .loginform label {
   color: white;
-  font-size: 1.7rem;
-  margin-bottom: 0.7rem;
+  font-size: 0.8rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.3rem;
 }
 
 .loginform input {
   color: white;
   border: none;
-
-  width: 20rem;
-  padding: 0.5rem;
-  font-size: 1.5rem;
+  width: 12rem;
+  padding: 0.2rem;
+  font-size: 1remƒ;
   border-radius: 10px;
   outline: none;
   background: #222222;
@@ -43,18 +39,17 @@
 .loginform p {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-bottom: 0.3rem;
 }
 
 .loginform button {
   all: unset;
   text-align: center;
   border: 1px solid white;
-
-  width: 20rem;
-  font-size: 1.5rem;
+  width: 12rem;
+  font-size: 1rem;
   color: white;
-  padding: 0.7rem 0;
+  padding: 0.3rem 0;
   margin-top: 1rem;
   border-radius: 10px;
   cursor: pointer;
@@ -62,25 +57,35 @@
 
 .errorMessage {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 0.7rem;
   color: rgb(170, 0, 0);
 }
 
 @media all and (min-width: 1024px) {
   .loginform {
-    margin: 3rem auto;
-    width: 46rem;
-    height: 34rem;
-    padding: 4rem 0;
+    margin: 1rem auto;
+    width: 40rem;
+    height: 32rem;
+  }
+  .loginform p {
+    margin-bottom: 2rem;
   }
   .loginform h1 {
     font-size: 3.5rem;
-    margin-bottom: 1.7rem;
+    margin-top:1rem;
+  }
+  .loginform label {
+    font-size: 2rem;
   }
   .loginform input {
+    font-size: 2rem;
     width: 27rem;
   }
   .loginform button {
     width: 27rem;
+    font-size: 2rem;
+  }
+  .errorMessage {
+    font-size: 1.2rem;
   }
 }

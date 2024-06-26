@@ -11,10 +11,11 @@ import { verifyAuth } from "@/lib/auth";
 
 export default async function ChannelE1() {
   const result = await verifyAuth();
+ 
   if (!result.user) {
     return <Cut header="MY PAGE" />;
   }
-
+  
   return (
     <div className={`${classes.profile} ${nanumgothic.className}`}>
       <div className={classes.img}>
@@ -22,12 +23,7 @@ export default async function ChannelE1() {
       </div>
       <div className={classes.info}>
         <p>
-          <FaPhoneSquareAlt className={classes.icon} />
-          {user.email}
-        </p>
-        <p>
-          <FaRocket className={classes.icon} />{" "}
-          {user.date.toISOString().split("T")[0]}
+          <FaRocket className={classes.icon} /> {result.user.id}
         </p>
       </div>
       <Image
@@ -40,3 +36,5 @@ export default async function ChannelE1() {
     </div>
   );
 }
+
+//user.date.toISOString().split("T")[0]

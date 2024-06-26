@@ -2,7 +2,6 @@ import "./globals.css";
 import { DM_Sans } from "next/font/google";
 import { Nanum_Gothic } from "next/font/google";
 
-
 export const nanumgothic = Nanum_Gothic({
   subsets: ["latin"],
   weight: ["400"],
@@ -19,12 +18,13 @@ export const metadata = {
   icons: {
     icon: "/icon.png",
   },
-  viewport: {
-    initialScale: 1,
-    width: "device-width",
-    maximumScale: 1,
-    minimumScale: 1,
-  },
+};
+
+export const viewport = {
+  initialScale: 1,
+  width: "device-width",
+  maximumScale: 1,
+  minimumScale: 1,
 };
 
 export default function RootLayout({ children }) {

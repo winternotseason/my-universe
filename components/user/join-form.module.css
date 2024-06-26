@@ -64,27 +64,40 @@
 }
 
 .errorMessage {
-  margin: 0;
-  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
   color: rgb(170, 0, 0);
 }
 
 @media all and (min-width: 1024px) {
   .joinform {
-    margin: 0 auto;
-    width: 46rem;
-    height: 47rem;
+    margin: 2rem auto;
+    width: 40rem;
+    height: 40rem;
+  }
+  .joinform p {
+    margin-bottom: 2rem;
   }
   .joinform h1 {
-    font-size: 3rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
   }
   .joinform label {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
   .joinform button {
-    width: 27rem;
+    font-size: 2rem;
+    width: 28rem;
   }
   .joinform input {
-    width: 27rem;
+    font-size: 2rem;
+    width: 28rem;
+  }
+  .joinform a {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  .errorMessage {
+    font-size: 1.2rem;
   }
 }

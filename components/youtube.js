@@ -4,7 +4,7 @@ import YouTube from "react-youtube";
 
 export default function YouTubePlayer({ videoId }) {
   const opts = {
-    height: "100%",
+    height: "300",
     width: "100%",
   };
 

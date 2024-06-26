@@ -38,8 +38,7 @@ export async function signup(prevState, formData) {
   }-${date.getDate()}`;
 
   let success = false;
-  console.log(id, password, query_date)
-  console.log( JSON.stringify({ id, password, query_date }))
+  console.log(process.env.NEXTAUTH_URL)
   try {
     const res = await fetch(`${process.env.NEXTAUTH_URL}api/account/join`, {
       method: "POST",

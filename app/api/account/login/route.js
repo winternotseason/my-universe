@@ -41,5 +41,5 @@ export async function POST(req) {
 
   await client.close();
   // userData._id.toString() : ObjectId
-  return NextResponse.json({ id: userData._id.toString() }, { status: 200 });
+  return NextResponse.json({ id: userData._id}, { status: 200 });
 }

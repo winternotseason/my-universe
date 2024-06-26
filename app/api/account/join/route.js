@@ -17,7 +17,7 @@ export async function POST(req, res) {
 
   // 이미 같은 이메일의 유저가 존재하면?
   if (user > 0) {
-    return NextResponse.json({ status: 500 });
+    return NextResponse.json({message:'이미 존재하는 이메일입니다.'},{ status: 500 });
   }
 
   await db.collection("users").insertOne({

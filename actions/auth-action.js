@@ -41,15 +41,15 @@ export async function signup(prevState, formData) {
   try {
     const res = await fetch(`${process.env.NEXTAUTH_URL}api/account/join`, {
       method: "POST",
-      credentials:'include',
-      body: JSON.stringify({ email, hashedPassword, date }),
+
+      body: JSON.stringify({ email, hashedPassword, query_date }),
       headers: {
         "content-type": "application/json",
       },
     });
     const data = await res.json();
     if (data.status === 500) {
-      errors.msg = "이미 존재하는 이메일입니다.";
+      errors.msg = data.message;
       return { errors };
     }
 

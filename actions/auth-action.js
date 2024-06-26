@@ -70,7 +70,7 @@ export async function login(prevState, formData) {
   let errors = {};
   let success = false;
   try {
-    const res = await fetch("http://localhost:3000/api/account/login", {
+    const res = await fetch(`${process.env.NEXTAUTH_URL}api/account/login`, {
       method: "POST",
       body: JSON.stringify({ id, password }),
       headers: {

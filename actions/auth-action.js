@@ -10,8 +10,7 @@ export async function signup(prevState, formData) {
   const id = formData.get("id"); // input의 name 속성
   const password = formData.get("password");
   const password_confirm = formData.get("password-confirm");
-console.log(id)
-console.log(typeof id)
+
   let errors = {};
   // 만약 이메일에 @가 빠졌다면?
   if (id.length < 5) {
@@ -34,15 +33,16 @@ console.log(typeof id)
   
   // 가입 날짜 설정
   const date = new Date();
-  const query_date = `${date.getFullYear()}-${
+  const query_date = `${date.getFullYear()}${
     date.getMonth() + 1
-  }-${date.getDate()}`;
+  }${date.getDate()}`;
 
   let success = false;
+  console.log(id, password, query_date)
+  console.log( JSON.stringify({ id, password, query_date }))
   try {
-    const res = await fetch(`${process.env.NEXTAUTH_URL}api/account/join`, {
+    const res = await fetch(`https://my-universe-liard.vercel.app/api/account/join`, {
       method: "POST",
-
       body: JSON.stringify({ id, password, query_date }),
       headers: {
         "content-type": "application/json",

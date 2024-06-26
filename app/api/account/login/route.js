@@ -41,3 +41,7 @@ export async function POST(req) {
   // userData._id.toString() : ObjectId
   return NextResponse.json({ id: userData._id}, { status: 200 });
 }
+
+export async function GET() {
+  return NextResponse.json({message:'get!'})
+}

@@ -40,7 +40,7 @@ export async function signup(prevState, formData) {
   let success = false;
   console.log(process.env.NEXTAUTH_URL)
   try {
-    const res = await fetch(`${process.env.NEXTAUTH_URL}api/account/join`, {
+    const res = await fetch(`https://my-universe-nine.vercel.app/api/account/join`, {
       method: "POST",
       body: JSON.stringify({ id, password, query_date }),
       headers: {

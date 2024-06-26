@@ -30,7 +30,7 @@ export async function signup(prevState, formData) {
   }
   /* db 저장 코드 */
 
-  const hashedPassword = await hashUserPassword(password);
+  
   // 가입 날짜 설정
   const date = new Date();
   const query_date = `${date.getFullYear()}-${
@@ -42,7 +42,7 @@ export async function signup(prevState, formData) {
     const res = await fetch(`${process.env.NEXTAUTH_URL}api/account/join`, {
       method: "POST",
 
-      body: JSON.stringify({ email, hashedPassword, query_date }),
+      body: JSON.stringify({ email, password, query_date }),
       headers: {
         "content-type": "application/json",
       },

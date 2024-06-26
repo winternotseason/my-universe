@@ -1,6 +1,7 @@
 // api/account/join
 
 import { connectDB } from "@/lib/auth";
+import { hashUserPassword } from "@/lib/hash";
 import { NextResponse } from "next/server";
 
 export async function POST(req, res) {
@@ -18,10 +19,10 @@ export async function POST(req, res) {
       { status: 500 }
     );
   }
-
+  data.password = await hashUserPassword(password);
   await db.collection("users").insertOne({
     _id: data.email,
-    password: data.hashedPassword,
+    password: data.password,
     date: data.date,
   });
 

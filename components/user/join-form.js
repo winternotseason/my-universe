@@ -12,8 +12,8 @@ export default function JoinForm() {
     <form className={classes.joinform} action={formAction}>
       <h1>MAKE YOUR UNIVERSE</h1>
       <p>
-        <label htmlFor="email">Email</label>
-        <input type="text" name="email" id="email" />
+        <label htmlFor="id">Id</label>
+        <input type="text" name="id" id="id" />
       </p>
       <p>
         <label htmlFor="password">Password</label>

@@ -10,18 +10,18 @@ export async function POST(req, res) {
   const client = await connectDB;
   const db = client.db("universe");
 
-  const user = await db.collection("users").countDocuments({ _id: data.email });
+  const user = await db.collection("users").countDocuments({ _id: data.id });
 
   // 이미 같은 이메일의 유저가 존재하면?
   if (user > 0) {
     return NextResponse.json(
-      { message: "이미 존재하는 이메일입니다." },
+      { message: "이미 존재하는 아이디입니다." },
       { status: 500 }
     );
   }
-  data.password = await hashUserPassword(password);
+  data.password = await hashUserPassword(data.password);
   await db.collection("users").insertOne({
-    _id: data.email,
+    _id: data.id,
     password: data.password,
     date: data.date,
   });

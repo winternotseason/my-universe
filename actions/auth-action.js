@@ -7,14 +7,15 @@ import { redirect } from "next/navigation";
 
 /* ------------회원가입 로직------------ */
 export async function signup(prevState, formData) {
-  const email = formData.get("email"); // input의 name 속성
+  const id = formData.get("id"); // input의 name 속성
   const password = formData.get("password");
   const password_confirm = formData.get("password-confirm");
-
+console.log(id)
+console.log(typeof id)
   let errors = {};
   // 만약 이메일에 @가 빠졌다면?
-  if (!email.includes("@")) {
-    errors.msg = "유효한 이메일을 입력해주세요.";
+  if (id.length < 5) {
+    errors.msg = "아이디는 5자 이상 입력해주세요.";
     return { errors };
   }
   // 비밀번호가 8자 미만이라면?
@@ -42,7 +43,7 @@ export async function signup(prevState, formData) {
     const res = await fetch(`${process.env.NEXTAUTH_URL}api/account/join`, {
       method: "POST",
 
-      body: JSON.stringify({ email, password, query_date }),
+      body: JSON.stringify({ id, password, query_date }),
       headers: {
         "content-type": "application/json",
       },

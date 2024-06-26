@@ -33,9 +33,9 @@ export async function signup(prevState, formData) {
   
   // 가입 날짜 설정
   const date = new Date();
-  const query_date = `${date.getFullYear()}-${
+  const query_date = `${date.getFullYear()}${
     date.getMonth() + 1
-  }-${date.getDate()}`;
+  }${date.getDate()}`;
 
   let success = false;
   console.log(process.env.NEXTAUTH_URL)

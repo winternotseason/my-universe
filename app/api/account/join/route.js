@@ -6,7 +6,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(req, res) {
   const data = await req.json();
-  console.log(data);
+
   const client = await connectDB;
   const db = client.db("universe");
 
@@ -25,8 +25,6 @@ export async function POST(req, res) {
     password: data.password,
     date: data.date,
   });
-
-  client.close();
 
   return NextResponse.json({ message: "회원가입 성공!!!!" });
 }
